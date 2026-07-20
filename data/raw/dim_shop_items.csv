@@ -1,0 +1,8 @@
+﻿item_id,item_name,price_usd,premium_currency
+S001,Starter Pack,0.99,120
+S002,Monthly Pass,4.99,600
+S003,Gem Pack S,4.99,300
+S004,Gem Pack M,14.99,980
+S005,Gem Pack L,29.99,1980
+S006,Gem Pack XL,49.99,3280
+S007,Gem Pack XXL,99.99,6480

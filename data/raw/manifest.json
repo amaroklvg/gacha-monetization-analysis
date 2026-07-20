@@ -1,0 +1,128 @@
+{
+  "dataset_version": "2.1",
+  "status": "FROZEN",
+  "seed": 20260720,
+  "generated_at_utc": "2026-07-20T13:24:05Z",
+  "simulation_period": {
+    "start": "2025-07-13",
+    "end": "2026-07-13"
+  },
+  "exported_hidden_traits": false,
+  "row_counts_dirty": {
+    "dim_users": 5000,
+    "dim_banners": 19,
+    "dim_characters": 21,
+    "dim_shop_items": 7,
+    "dim_staff": 32,
+    "bridge_character_staff": 84,
+    "dim_character_campaigns": 21,
+    "fact_logins": 127062,
+    "fact_pulls": 88740,
+    "fact_purchases": 1037,
+    "fact_currency": 221189
+  },
+  "clean_pre_corruption_validation": {
+    "unique_primary_keys_clean": true,
+    "orphan_user_fk_clean": 0,
+    "orphan_banner_fk_clean": 0,
+    "invalid_character_clean": 0,
+    "invalid_pity_clean": 0,
+    "purchase_number_sequences_clean": true,
+    "events_before_registration_clean": 0
+  },
+  "intentional_dirty_issues": [
+    {
+      "table": "dim_users",
+      "issue": "blank country",
+      "count": 25
+    },
+    {
+      "table": "dim_users",
+      "issue": "platform typo",
+      "count": 30
+    },
+    {
+      "table": "fact_logins",
+      "issue": "blank session_minutes",
+      "count": 60
+    },
+    {
+      "table": "fact_logins",
+      "issue": "invalid/outlier session_minutes",
+      "count": 12
+    },
+    {
+      "table": "fact_purchases",
+      "issue": "comma decimal price",
+      "count": 25
+    },
+    {
+      "table": "fact_logins",
+      "issue": "exact duplicate rows",
+      "count": 20
+    },
+    {
+      "table": "fact_pulls",
+      "issue": "exact duplicate rows",
+      "count": 30
+    },
+    {
+      "table": "fact_purchases",
+      "issue": "exact duplicate rows",
+      "count": 8
+    },
+    {
+      "table": "fact_pulls",
+      "issue": "orphan banner FK",
+      "count": 8
+    },
+    {
+      "table": "fact_purchases",
+      "issue": "orphan banner FK",
+      "count": 3
+    },
+    {
+      "table": "fact_currency",
+      "issue": "orphan banner FK",
+      "count": 8
+    },
+    {
+      "table": "fact_logins",
+      "issue": "orphan user FK",
+      "count": 5
+    },
+    {
+      "table": "fact_pulls",
+      "issue": "orphan user FK",
+      "count": 5
+    },
+    {
+      "table": "fact_purchases",
+      "issue": "orphan user FK",
+      "count": 3
+    },
+    {
+      "table": "fact_currency",
+      "issue": "orphan user FK",
+      "count": 5
+    },
+    {
+      "table": "fact_purchases",
+      "issue": "purchase before registration",
+      "count": 4
+    }
+  ],
+  "sha256": {
+    "bridge_character_staff.csv": "8f86bdc878c125484edec687b954d1d2832892b84d5eb514c82f9e617bbe3881",
+    "dim_banners.csv": "f21cea567b3edb5d3bc2a2d74870ed66076532f04af21a625afd20be9dc19584",
+    "dim_characters.csv": "074e3cd20b590b9548a772e13a18a6af301a1067d922e3a1da65ee1917a70dad",
+    "dim_character_campaigns.csv": "7435bb38644f770c0b6be29fed34a80e2110ff4344ddf3c2794d175a6a9b609f",
+    "dim_shop_items.csv": "186b6b569010b725c199ed058531dfabdfd266fb745ff8fd13b9886230d40fc7",
+    "dim_staff.csv": "c1bf021fbcf828843964e75b1f510c80942db7e62f385a910e57f19f84a39fa7",
+    "dim_users.csv": "22c87f310e5ed3a2129961a5d11ed642506061d1225052b7b3245a3871b86ab4",
+    "fact_currency.csv": "8c65c8a6d6e5af908ea4609b892ed14a125c0f1602cebbc2d2ec9b7374e9400f",
+    "fact_logins.csv": "1bae9d6946edc533040c375d8ae2a6d2831bd939a5ec509d7a0a60cd09cc0bc6",
+    "fact_pulls.csv": "024522d32e462eadc87fb0c6323989db1083a09412568d91b2ed203169b73ed8",
+    "fact_purchases.csv": "504f789d63886440f8da759cbc867ac346e07f576c63a991d3fe592a7aff21cf"
+  }
+}
