@@ -1,5 +1,5 @@
-# Extracted datasets
-data/raw/*.csv
+# Locally extracted source files
+data/raw/*
 
 # Environment files and passwords
 .env
