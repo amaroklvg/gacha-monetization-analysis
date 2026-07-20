@@ -1,0 +1,24 @@
+# Extracted datasets
+data/raw/*.csv
+
+# Environment files and passwords
+.env
+*.env
+
+# VS Code local settings
+.vscode/
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# Power BI temporary files
+*.pbix~
+*.tmp
+
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+
+# General temporary files
+*.log
